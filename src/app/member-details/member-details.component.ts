@@ -33,6 +33,7 @@ export class MemberDetailsComponent implements OnInit, OnChanges {
 
   // TODO: Add member to members
   onSubmit(form: FormGroup) {
+    console.log("Initiating add user");
     this.memberModel = form.value;
   }
 }

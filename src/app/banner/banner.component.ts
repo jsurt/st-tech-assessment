@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
-  constructor(private appService: AppService, private router: Router) { }
+  // Below, changed 'private' to 'public' because the members of the component accessed by
+  // a template should be public (StackOverflow: https://stackoverflow.com/a/43177386/10187723)
+  constructor(public appService: AppService, public router: Router) { }
 
   ngOnInit() {
   }
